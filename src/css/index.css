@@ -1,0 +1,87 @@
+:root {
+  --text: rgb(29, 49, 94)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  background: lightblue;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 50%;
+  min-height: 3rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: var(--text);
+  font-size: 1.2rem;
+  padding: 0 1.2rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+.list {
+  margin: 2rem 0;
+  list-style: none;
+  max-height: 80vh;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+
+.book {
+  background: #fff;
+  color: var(--text);
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  padding: .8rem 2rem;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .3);
+}
+
+.loading {
+  animation-name: loading;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  color: var(--text);
+}
+
+.error {
+  color: lightcoral;
+}
+
+@keyframes loading {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(180deg);
+  }
+}
